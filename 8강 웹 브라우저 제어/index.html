@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>8강 웹 브라우저 제어 </title>
+        <style>
+            .div {
+                display: flex;
+                align-items: baseline;
+            }
+            .html {
+                color: rgb(255, 98, 111);
+            }
+            .JavaScript {
+                color: rgb(252, 171, 21);
+            }
+            .box {
+                border: 1px solid #ccc;
+                border-radius: 15px;
+                padding: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="div">
+            <h1 class="html">HTML</h1>은 정적인 언어
+        </div>
+        <div class="div">
+            <h1 class='JavaScript'>JavaScript</h1> 로 동적인 제어 가능
+        </div>  
+        <input type="button" value="night" onclick="
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';
+        ">
+        <input type="button" value="day" onclick="
+        document.querySelector('body').style.backgroundColor='white';
+        document.que
+        rySelector('body').style.color='black';
+        ">
+        <div class="box">
+            <h1> 다음 강의 주제 : 알아야 될 것</h1>
+            <p> 1. css 기본적인 문법 </p>
+            <p> 2. JavaScript로 제어하는 부분(태그)를 선택하는 방법 </p>
+        </div>
+    </body>
+</html>

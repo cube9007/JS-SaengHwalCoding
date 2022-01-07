@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>12.제어할 태그 선택하기 </title>
+        <style>
+            .div {
+                display: flex;
+                align-items: baseline;
+            }
+            .html {
+                color: rgb(255, 98, 111);
+            }
+            .JavaScript {
+                color: rgb(252, 171, 21);
+            }
+            .box {
+                border: 1px solid #ccc;
+                border-radius: 15px;
+                padding: 15px;
+                margin: 15px;
+            }
+            .input {
+                margin: 20px;
+                padding: 30px;
+                font-size: 25px;
+                color: white;
+                background-color: rgb(252, 171, 21);
+                border: 1px solid rgb(0,0,0,0);
+                border-radius: 15px;
+                transition: 0.5s;
+            }
+            .input:hover {
+                background-color: rgb(223, 151, 18);
+                transition: 0.5s;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <h1 class="html">제어할 태그 선택하기</h1>
+            <h3> 선택자 넣는 법 검색 </h3>
+            <a href="https://developer.mozilla.org/ko/docs/Web/API/Document/querySelector" > javascript select tag by css selector 구글링</a>
+            <p> document.querySelector(selectors); </p>
+            <p> selectors에 'body' 넣으면 바디태그 선택됨 </p>
+            
+            <br>
+            <h3> 설렉터 뒤에 스타일 넣는 법 검색 </h3>
+            <a href="https://www.w3schools.com/jsref/prop_html_style.asp"> javascript element style 구글링 </a>
+            <p> document.getElementById("myH1").style.color = "red"; </p>
+            <p> 설렉터 뒤에 .style 넢으면 됨</p>
+
+            <br>
+            <h3> 설렉터 뒤에 스타일 뒤에 배경 넣는 법 검색 </h3>
+            <a href="https://www.w3schools.com/jsref/prop_style_backgroundcolor.asp"> javascript style background-color 구글링</a>
+            <p> document.body.style.backgroundColor = "red"; </p>
+            <p> 스타일 뒤에 .backgroundColor = '' 넣으면 됨 </p>
+
+            <input class="input" type="button" value="Night" onclick=" 
+                document.querySelector('body').style.backgroundColor='black';
+                document.querySelector('body').style.color='white';
+            ">
+            <input class="input" type="button" value="Day" onclick=" 
+                document.querySelector('body').style.backgroundColor='white';
+                document.querySelector('body').style.color='black';
+            ">
+        </div>
+        <div class="box">
+            <h2> 아무 성질이 없는 태그</h2>
+            <p> span : 줄바꿈조차 안됨, 아무 특징 없음 </p>
+        </div>
+    </body>
+</html>

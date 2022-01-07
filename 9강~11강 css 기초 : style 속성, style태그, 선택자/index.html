@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>9강~11강 css 기초 : style 속성, style태그, 선택자 </title>
+        <style>
+            .div {
+                display: flex;
+                align-items: baseline;
+            }
+            .html {
+                color: rgb(255, 98, 111);
+            }
+            .JavaScript {
+                color: rgb(252, 171, 21);
+            }
+            .box {
+                border: 1px solid #ccc;
+                border-radius: 15px;
+                padding: 15px;
+                margin: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <h1 class="html">CSS 주는 법</h1>
+            <p> 1. 태그 안에 style 속성 (property) 주기 </p>
+            <p> 2. head 태그 안에 style 태그 넣고 그 안에 css 작성 </p>
+            <p> - class : . : 무언가를 그룹핑한다 : 반 1반 2반 나누듯이</p>
+            <p> - id : # : 한가지 대상을 식별한다, 1번만 쓰는 게 규약( 2개 이상 그룹 할 수 있긴 한데 규약 위반) : 이름 누구 누구 나누듯이 </p>
+            <p> - ( 선택자 : 태그 선택자, 클래스 선택자, 아이디 선택자 3개 )</p>
+            <p> 3. css 파일 만들어서 그 안에 css 작성 </p>
+        </div>
+        <div class="box">
+            <h2> 아무 성질이 없는 태그</h2>
+            <div> div : 줄바꿈만 됨 그 외 특징 없음, 그냥 상자 </div>
+            <p> span : 줄바꿈조차 안됨, 아무 특징 없음 </p>
+        </div>
+    </body>
+</html>

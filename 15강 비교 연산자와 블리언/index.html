@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>15강 비교 연산자와 블리언</title>
+        <style>
+            .div {
+                display: flex;
+                align-items: baseline;
+            }
+            .html {
+                color: rgb(255, 98, 111);
+            }
+            .JavaScript {
+                color: rgb(252, 171, 21);
+            }
+            .box {
+                border: 1px solid #ccc;
+                border-radius: 15px;
+                padding: 15px;
+                margin: 15px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <h1 class="html">비교 연산자와 블리언</h1>
+            <h3>비교 연산자 (Compoarison Operatior) / 불리언 (Boolean)</h3>
+            <div class="box">
+                <h3>===</h3>
+                <p>비교 연산자면서, 이항 연산자 </p>
+                <p>좌항과 우항이 같으면 true를 출력, 다르면 false를 출력 </p>
+                <p> 여기서 true와 false 두 값 = boolean 이라고 함 </p>
+                <p>document.write(1===1);</p>
+                <script>
+                    document.write(1===1);
+                </script>
+                <p>document.write(1===2);</p>
+                <script>
+                    document.write(1===2);
+                </script>
+            </div>
+            <div class="box">
+                <h3> &lt; </h3>
+                <p>document.write(1&lt;2);</p>
+                <script>
+                    document.write(1<2);
+                </script>
+                <p>document.write(1&lt;1);</p>
+                <script>
+                    document.write(1<1);
+                </script>
+            </div>
+        </div>
+        <div class="box">
+            <h1 class="html"> 데이터 타입 </h1>
+            <h3> 숫자열 number </h3>
+            <p> 숫자는 무한이 많음, 숫자열의 값도 무한히 많음 </p>
+            <h3> 문자열 string </h3>
+            <p> 문자도 매우 많음(인간의 언어만큼), 문자열의 값도 엄청 많음 </p>
+            <h3> 불리언 boolean </h3>
+            <p> 2개의 데이터만 있음, true/false </p>
+            <p>이 2개로 인해 -> 인간의 단순 반복 업무를 해방시킴, (영국 수학자 '조지 부울'의 수학적 업적을 기념하기 위한 이름)</p>
+        </div>
+    </body>
+</html>

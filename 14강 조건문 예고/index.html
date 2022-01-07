@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>14강 조건문 예고</title>
+        <style>
+            .div {
+                display: flex;
+                align-items: baseline;
+            }
+            .html {
+                color: rgb(255, 98, 111);
+            }
+            .JavaScript {
+                color: rgb(252, 171, 21);
+            }
+            .box {
+                border: 1px solid #ccc;
+                border-radius: 15px;
+                padding: 15px;
+                margin: 15px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <h1 class="html">조건문 예고</h1>
+            <h3> 뜻 </h3>
+            <p> 조건에 따라 다른 명령이 실행되게 하게끔 하는 코드 </p>
+            <p> 기존 코드가 반복되는 명령을 시켰다면, 조건문은 복잡한 업무까지도 명령 = 혁명 !!</p>
+            
+            <input type="button" value="Night" onClick="
+            if(document.querySelector('body').dataset.mode === 'Day') {
+                document.querySelector('body').style.backgroundColor='black';
+                document.querySelector('body').style.color='white';
+                document.querySelector('body').dataset.mode = 'Night';
+                this.value = 'Day'
+            } else {
+                document.querySelector('body').style.backgroundColor='white';
+                document.querySelector('body').style.color='black';
+                document.querySelector('body').dataset.mode = 'Day';
+                this.value = 'Night'
+            }
+            ">
+            <p> 토글 버튼 구현 가능 : 여러 불만 해결 가능 </p>
+        </div>
+    </body>
+</html>

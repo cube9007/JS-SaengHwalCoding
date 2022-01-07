@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>6강 데이터 타입 : 문자와 숫자 </title>
+        <style>
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            input {
+                background-color: rgb(252, 171, 21);
+                height: 80px;
+                padding: 0 30px;
+                font-size: 25px;
+                border: 1px solid white;
+                border-radius: 15px;
+                color: white;
+            }
+            input:hover {
+                background-color: rgb(223, 151, 18);
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <input type="button" value="1+1" onclick="alert(1+1)">
+            <input type="button" value="'1+1'" onclick="alert('1+1')">
+            <input type="button" value="'1'+'1'" onclick="alert('1'+'1')">
+            <input type="button" value="2-1" onclick="alert(2-1)">
+            <input type="button" value="2*4" onclick="alert(2*4)">
+            <input type="button" value="6/3" onclick="alert(6/3)">
+            <input type="button" value="'hello world'" onclick="alert('hello world')">
+            <input type="button" value="'hello world'.length" onclick="alert('hello world'.length)">
+            <input type="button" value="'hello world'.toUpperCase()" onclick="alert('hello world'.toUpperCase())">
+            <script>
+                const str = '자바스크립트 문자열 문자수:';
+                document.write(`${str} ${str.length}`);
+                var x = 'Mozilla';
+                var empty = '';
+                document.write( x + '는 코드 유닛 ' + x.length + '개의 길이입니다.');
+                /* "Mozilla는 코드 유닛 7개의 길이입니다." */
+                document.write('빈 문자열은 ' + empty.length + '의 길이를 가집니다.');
+                /* "빈 문자열은 0의 길이를 가집니다." */
+            </script>
+            <p> <a href='https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/length'>JavaScript .length 구글링 모질라 사이트</a></p>
+        </div>  
+    </body>
+</html>

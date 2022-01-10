@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>18강 리팩토링 중복의 제거 </title>
+        <style>
+            .div {
+                display: flex;
+                align-items: baseline;
+            }
+            .red {
+                color: rgb(255, 98, 111);
+            }
+            .yellow {
+                color: rgb(252, 171, 21);
+            }
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .topbar {
+                margin: 0;
+                padding-left: 30px;
+                display: flex;
+                align-items: center;
+                background-color: rgb(252, 171, 21);
+                color: white;
+                height: 75px;
+            }
+            .box {
+                border: 1px solid #ccc;
+                border-radius: 15px;
+                padding: 15px 40px;
+                margin: 15px;
+            }
+            .example {
+                border: 1px solid #ccc;
+                border-radius: 15px;
+                padding: 15px 30px;
+                margin: 15px;
+                background-color: rgb(0,0,0,0.85);
+                color: white;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="topbar">
+            <h1> 리팩토링 중복의 제거 = 코딩을 잘하는 방법!</h1>
+        </div>  
+        <div class="box">
+            <h3> 리팩토링 의미 </h3>
+            <p> 공장으로 보내서 다시 개선한다. </p>
+            <p> = 코드 가독성을 높이고, 코드 자체를 효율적으로 만듬, 유지보수 용이, 중복코드 없앰 </p>
+            <p> 중복코드 없애면 = 코딩을 잘하는 거임</p>
+        </div>
+        <div class="box">
+            <h3> 중복 코드 없애기 </h3>
+            <p> 공장으로 보내서 다시 개선한다. </p>
+            <input type="button" value="night" onclick="
+            var target = document.querySelector('body');
+            if(this.value === 'night') {
+            target.style.backgroundColor='black';
+            target.style.color='white';
+            this.value='day';
+            } else {
+            target.style.backgroundColor='white';
+            target.style.color='black';
+            this.value='night';
+            }
+            "> 
+            <div class="example">
+                <xmp>
+<input id="day_night" type="button" value="night" onclick="
+if(document.querySelector('#day_night').value === 'night') {
+document.querySelector('body').style.backgroundColor='black';
+document.querySelector('body').style.color='white';
+document.querySelector('#day_night').value='day';
+} else {
+document.querySelector('body').style.backgroundColor='white';
+document.querySelector('body').style.color='black';
+document.querySelector('#day_night').value='night';
+}
+"> 
+                </xmp>
+            </div>
+            <div class="example">
+                <xmp>
+<input type="button" value="night" onclick="
+var target = document.querySelector('body');
+if(this.value === 'night') {
+target.style.backgroundColor='black';
+target.style.color='white';
+this.value='day';
+} else {
+target.style.backgroundColor='white';
+target.style.color='black';
+this.value='night';
+}
+"> 
+                </xmp>
+                
+            </div>
+            <p> 둘다 같은 동작을 함 <br>
+                근데 코드는 더 간결함 <br>
+                <b>1. 자기 자신을 나타내는 코드는 this.를 쓰면 됨 <br>
+                2. 중복되늰 코드는 var로 변수를 주면 됨 </b>
+            </p>
+        </div>
+                 
+    </body>
+</html>

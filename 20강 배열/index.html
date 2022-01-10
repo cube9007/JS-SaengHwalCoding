@@ -51,7 +51,7 @@
         <div class="box">
             <h3> 배열이 왜 필요한가?</h3>
             <pre>
-반복문을 배우면 이해될 것임
+반복문을 배우면 이해될 것임 = 반복문과 배열은 환상의 콤비 
 살림이 늘어나면 책장이나 서랍을 사게 됨 = 집에 있는 사물이 많아질수록 정리정돈이 필요하게 됨 
 코딩도 마찬가지 - 굉장히 많은 데이터를 다루게 됨 = 수납 상자로 단순화할 필요가 있음 
 배열 = 데이터를 정리하는 수납상자 
@@ -73,18 +73,32 @@
             <pre>
 coworkers라는 수납상자에 2개를 넣어놓은 상태 
             </pre>
+
             <h4> get = 꺼내오는 법 </h4>
             <script>
                 document.write(coworkers[0]);
                 document.write(coworkers[1]);
             </script>
             <div class="example">
-                document.write(coworkers[0]);
+                document.write(coworkers[0]); <br>
                 document.write(coworkers[1]);
             </div>
             <pre>
 변수 뒤에 [0] = 배열 중 0번째를 가져오겠다 
 이 0,1,2,3 = Index라고 부름 
+            </pre>
+
+            <h4> add </h4>
+            <script>
+                coworkers.push('wonho');
+                coworkers.push('yuri');
+            </script>
+            <div class="example">
+                coworkers.push('wonho');<br>
+                coworkers.push('yuri');
+            </div>
+            <pre>
+변수 뒤에 .push를 붙여서 배열 뒤에 배열 요소를 추가할 수 있음
             </pre>
             <h4> count </h4>
             <script>
@@ -104,6 +118,16 @@ coworkers라는 수납상자에 2개를 넣어놓은 상태
             <pre>
 console.log(clothing.length);
 // expected output: 4                
+            </pre>
+            <h4> 배열 더하는 법 </h4>
+            <a href=""> javascript array array add 구글링 </a>
+            <p> coworkers.push('d'); </p>
+            <h4> 검색할 줄 알아야 됨</h4>
+            <pre>
+javascript array 라고만 검색해도, array의 여러 기능이 같이 나옴
+이 여러기능을 이용해서 배열이라는 수납상자에 넣고 빼고, 이것 저것 할 수 있는 것임 
+외울 필요 Never!!!
+검색기능 활용하기! 
             </pre>
         </div>
     </body>

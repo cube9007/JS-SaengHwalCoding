@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> 21강 반복문 </title>
+        <style>
+            .div {
+                display: flex;
+                align-items: baseline;
+            }
+            .red {
+                color: rgb(255, 98, 111);
+            }
+            .yellow {
+                color: rgb(252, 171, 21);
+            }
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .topbar {
+                margin: 0;
+                padding-left: 30px;
+                display: flex;
+                align-items: center;
+                background-color: rgb(252, 171, 21);
+                color: white;
+                height: 75px;
+            }
+            .box {
+                border: 1px solid #ccc;
+                border-radius: 15px;
+                padding: 15px 40px;
+                margin: 15px;
+            }
+            .example {
+                border: 1px solid #ccc;
+                border-radius: 15px;
+                padding: 15px 30px;
+                margin: 15px;
+                background-color: rgb(0,0,0,0.85);
+                color: white;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="topbar">
+            <h1> 반복문 Loop</h1>
+        </div>  
+        <div class="box">
+            <h3> 반복문은 왜 필요한가? </h3>
+            <ul>
+                <script>
+                    document.write('<li>1</li>');
+                    document.write('<li>2</li>');
+                    document.write('<li>3</li>');
+                    document.write('<li>4</li>');
+                </script>
+            </ul>
+            <div class="example">
+                <xmp>
+<ul>
+    <script>
+        document.write('<li>1</li>');
+        document.write('<li>2</li>');
+        document.write('<li>3</li>');
+        document.write('<li>4</li>');
+    </script>
+</ul>
+                </xmp>
+            </div>
+            <pre>
+예를 들어 위와 같은 코드를 1억번 반복해야된다면, 복붙으로는 한계가 있음 
+하지만 반복문을 쓰면 쉽게 할 수 있음
+            </pre>
+            <h4>반복문 예시</h4>
+            <ul>
+                <script>
+                    document.write('<li>1</li>');
+                    var i = 0
+                    while(i < 3) {
+                        document.write('<li>2</li>');
+                        i = i + 1
+                    }
+                    document.write('<li>3</li>');
+                    document.write('<li>4</li>');
+                </script>
+            </ul>
+            <div class="example">
+                <xmp>
+<ul>
+    <script>
+        document.write('<li>1</li>');
+        var i = 0
+        while(i < 3) {
+            document.write('<li>2</li>');
+            i = i + 1
+        }
+        document.write('<li>3</li>');
+        document.write('<li>4</li>');
+    </script>
+</ul>
+                </xmp>
+            </div>
+            <pre>
+2번쨰 li를 3번 반복시키는 반복문임
+반복문은 while문을 씀
+while뒤에 오는 ()에 불리언(true or false) 를 넣음
+관습적으로 변수는 i를 씀
+i는 매 실행될때마다 1씩 증가하도록 i = i + 1 을 넣음
+while의 ()안에 i는 3보다 작다는 문구를 넣으면 완성 
+            </pre>
+        </div>
+        
+    </body>
+</html>

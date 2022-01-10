@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title> 25강 함수 이론 </title>
+        <title> 27강 함수 리턴 </title>
         <style>
             a {
                 color: blue;
@@ -61,65 +61,45 @@
     </head>
     <body>
         <div class="topbar">
-            <h1> 함수 function (나중에 객체 배우면 메소드 method라고 부르기도 함)</h1>
+            <h1> 함수 리턴 </h1>
         </div>  
         <div class="box">
-            <h3> 함수의 기본적인 문법 </h3>
-            <ul>
-                <li>1</li>
-                <li>2-1</li>
-                <li>2-2</li>
-                <li>3</li>
-                <li>2-1</li>
-                <li>2-2</li>
-            </ul>
-            <div class="example">
-                <xmp>
-<ul>
-    <li>1</li>
-    <li>2-1</li>
-    <li>2-2</li>
-    <li>3</li>
-    <li>2-1</li>
-    <li>2-2</li>
-</ul>   
-                </xmp>
-            </div>
-            <pre>
-만약 반복문을 쓰려고 하는데, 규칙적으로 반복되는게 아니라면
-반복문을 사용하기가 어려워지거나 불가능해짐
-(중간에 뭐가 하나 껴있다거나, 빠져야된다거나 등등)
-            </pre>
-            <h4> 함수 사용 예시 </h4>
+            <h3> 함수 리턴을 하기 전, 표현식이란 무엇인가? (expression) </h3>
+            <xmp>
+1+1
+2
+
+2-1
+1
+
+1 === 1     <- true라는 값에 대한 표현식
+true     
+            </xmp>
+        </div>
+        <div class="box">
+            <h3> 리턴 활용 </h3>
             <script>
-                function two() {
-                    document.write('<li>2-1</li>');
-                    document.write('<li>2-2</li>');
+                function sum2(left,right) {
+                    return left + right ;
                 }
-                document.write('<li>1</li>');
-                two();
-                document.write('<li>3</li>');
-                two();
+                document.write(sum2(2,3)+'<br>');
+                document.write('<div style="color:red">' + sum2(4,5)+'</div>');
+                document.write('<div style="font-size:25px">' + sum2(3,4)+'</div>');
             </script>
             <div class="example">
                 <xmp>
 <script>
-    function two() {
-        document.write('<li>2-1</li>');
-        document.write('<li>2-2</li>');
-    }
-    document.write('<li>1</li>');
-    two();
-    document.write('<li>3</li>');
-    two();
+    function sum2(left,right) {                                             <- left,right = 매개변수 (파라미터)
+        return left + right ;                                           <- 리턴 구문 
+    } 
+    document.write(sum2(2,3)+'<br>');                                       <- 2,3 = 인자 (아규먼트)
+    document.write('<div style="color:red">' + sum2(4,5)+'</div>');         <- 4,5 = 인자 (아규먼트)
+    document.write('<div style="font-size:25px">' + sum2(3,4)+'</div>');    <- 3,4 = 인자 (아규먼트)
 </script>
                 </xmp>
             </div>
             <pre>
-똑같아 보이지만 다른 코드를 사용 
-function 뒤에 이름을 써줌 ( two라고 짓겠음 )
-이름 뒤엔 무조건 ()괄호 쓸 것
-함수 내용은 () 뒤의 {}중괄호 안에 넣을 것
+아규먼트의 값을 파라미터에 대입해서, 리턴구문에 표현식으로 넣음 
             </pre>
         </div>
     </body>

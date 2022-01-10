@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title> 24강 함수예고 </title>
+        <title> 28강 함수의 활용 </title>
         <style>
             a {
                 color: blue;
@@ -104,116 +104,27 @@
     </head>
     <body>
         <div class="topbar">
-            <h1> 함수예고 function </h1>
+            <h1> 함수 활용 </h1>
         </div>  
         <div class="box">
-            <h3> 함수 = 수납상자 </h3>
+            <h3> 함수를 사용한 리팩토링 </h3>
             <pre>
-집에 살림이 많아지면, 수납상자에 정리
-코드도 많아지면 정리할 도구가 필요함 
-만약 아래의 인풋 태그가 1억개가 있다면 
+함수는 리팩토링을 하는 데 있어서 매우 중요한 역할을 함 
+만약에 긴 코드가 1억번 반복된다면 굳이 1억번 쓸 필요 없음
+긴 코드를 함수에 담아 함수만 1억번 반복하면 됨
+* ctrl + d = 같은 문자 멀티 커서 
             </pre>
             <input class="day_night" type="button" value="Night" onclick="
                 dayNightHandler(this);
             ">
             <div class="example">
-                <xmp>
-<input class="day_night" type="button" value="Night" onclick="
-    var example = document.querySelectorAll('div.example');
-    var i = 0;
-    var alist = document.querySelectorAll('a');
-    var i2 = 0;
-    var dayNightInput = document.querySelectorAll('input.day_night');
-    var i3 = 0;
-    if (self.value === 'Night') {
-        document.querySelector('body').style.backgroundColor='rgb(0,0,0,0.85)';
-        document.querySelector('body').style.color='white';
-        while ( i < example.length ) {
-            example[i].style.backgroundColor='rgb(255,255,255,0.5)';
-            example[i].style.color='black';
-            i = i + 1;
-        }
-        while ( i2 < alist.length ) {
-            alist[i2].style.color='powderblue';
-            i2 = i2 + 1;
-        }
-        while ( i3 < dayNightInput.length ) {
-            dayNightInput[i3].value = 'Day';
-            i3 = i3 + 1;
-        }
-    } else {
-        document.querySelector('body').style.backgroundColor='white';
-        document.querySelector('body').style.color='black';
-        while ( i < example.length ) {
-            example[i].style.backgroundColor='rgb(0,0,0,0.85)';
-            example[i].style.color='white';
-            i = i + 1;
-        }
-        while ( i2 < alist.length ) {
-            alist[i2].style.color='blue';
-            i2 = i2 + 1;
-        }
-        while ( i3 < dayNightInput.length ) {
-            dayNightInput[i3].value = 'Night';
-            i3 = i3 + 1;
-        }
-    }
-">
-                </xmp>
+<xmp>
+    <input class="day_night" type="button" value="Night" onclick="
+    dayNightHandler(this);
+    ">
+</xmp>
             </div>
-            <pre>
-너무 복잡해질 것임, 저런 길쭉한 코드를 가지고 있는 인풋 태그를 1억개씩 써야됨 
-이 떄 함수를 쓰면 됨 
-            </pre>
-
-            <input class="day_night" type="button" value="Night" onclick="
-                dayNightHandler(this);
-            ">
-            <input class="day_night" type="button" value="Night" onclick="
-                dayNightHandler(this);
-            ">
-            <input class="day_night" type="button" value="Night" onclick="
-                dayNightHandler(this);
-            ">
-            <input class="day_night" type="button" value="Night" onclick="
-                dayNightHandler(this);
-            ">
-            <input class="day_night" type="button" value="Night" onclick="
-                dayNightHandler(this);
-            ">
-            <input class="day_night" type="button" value="Night" onclick="
-                dayNightHandler(this);
-            ">
-            <div class="example">
-                <xmp>
-function dayNightHandler(self) {
-    인풋 안에 들어가는 자바스크립트
-}
-<input class="day_night" type="button" value="Night" onclick="
-    dayNightHandler(this);
-">
-<input class="day_night" type="button" value="Night" onclick="
-    dayNightHandler(this);
-">
-<input class="day_night" type="button" value="Night" onclick="
-    dayNightHandler(this);
-">      
-<input class="day_night" type="button" value="Night" onclick="
-    dayNightHandler(this);
-">
-<input class="day_night" type="button" value="Night" onclick="
-    dayNightHandler(this);
-">
-<input class="day_night" type="button" value="Night" onclick="
-    dayNightHandler(this);
-">      
-                </xmp>
-            </div>
-            <pre>
-함수를 쓰면 여러개를 써도 코드를 간단히 쓸 수 있음
-100개를 써도 안복잡함 
-또한 유지보수도 편함 - 함수 안에 컬러 하나를 바꾸면 그 함수를 사용하는 1억개의 사용처에서 컬러가 모두 바뀜 
-            </pre>
         </div>
+        
     </body>
 </html>

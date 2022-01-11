@@ -3,80 +3,10 @@
     <head>
         <meta charset="utf-8">
         <title> 30강 객체 쓰기와 읽기  </title>
-        <style>
-            a {
-                color: blue;
-            }
-            .div {
-                display: flex;
-                align-items: baseline;
-            }
-            .red {
-                color: rgb(255, 98, 111);
-            }
-            .yellow {
-                color: rgb(252, 171, 21);
-            }
-            body {
-                margin: 0;
-                padding: 0;
-            }
-            .topbar {
-                margin: 0;
-                padding-left: 30px;
-                display: flex;
-                align-items: center;
-                background-color: rgb(252, 171, 21);
-                color: white;
-                height: 75px;
-            }
-            .box {
-                border: 1px solid #ccc;
-                border-radius: 15px;
-                padding: 15px 40px;
-                margin: 15px;
-            }
-            .example {
-                border: 1px solid #ccc;
-                border-radius: 15px;
-                padding: 15px 30px;
-                margin: 15px;
-                background-color: rgb(0,0,0,0.85);
-                color: white;
-            }
-            .day_night {
-                background-color: rgb(252, 171, 21);
-                font-size: 25px;
-                height: 100px;
-                padding: 0 30px;
-                border: 1px solid rgb(0,0,0,0);
-                border-radius: 15px;
-                color: white;
-            }
-            .day_night:hover {
-                background-color: rgb(226, 153, 17);
-                transition: 0.5s;
-            }
+        <style type='text/css'>
+            @import url('../css.css');
         </style>
-        <script>
-            function dayNightHandler(self) {
-                function bodySetBackgroundColor(color) {
-                    document.querySelector('body').style.backgroundColor = color;
-                }
-                function bodySetColor(color) {
-                    document.querySelector('body').style.color = color;
-                }
-                if (self.value === 'Night') {
-                    bodySetBackgroundColor('rgb(0,0,0,0.85')
-                    bodySetColor('white')
-                    self.value = 'Day' ;
-                } else {
-                    bodySetBackgroundColor('white')
-                    bodySetColor('black')
-                    self.value = 'Night';
-                }
-            }
-        </script>
+        
     </head>
     <body>
         <div class="topbar">
@@ -95,7 +25,7 @@
             </pre>
         </div>
         <div class="box">
-            <h3> 읽고 쓰기  </h3>
+            <h3> 읽고 쓰기 </h3>
             <script>
                 var naming = {
                     'designer' : 'wonho',

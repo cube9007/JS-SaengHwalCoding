@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> 33강 객체의 활용  </title>
+        <style type='text/css'>
+            @import url('../css.css');
+        </style>
+        <script>
+            function dayNightHandler(self) {
+                function bodySetBackgroundColor(color) {
+                        document.querySelector('body').style.backgroundColor = color;
+                    };
+                function bodySetColor(color) {
+                    document.querySelector('body').style.color = color;
+                };
+                if (self.value === 'Night') {
+                    bodySetBackgroundColor('rgb(0,0,0,0.85');
+                    bodySetColor('white');
+                    var day_night = document.querySelectorAll('.day_night');
+                    var i = 0
+                    while(i < day_night.length) {
+                        day_night[i].value = 'Day'; 
+                        i = i + 1;
+                    }
+                } else {
+                    bodySetBackgroundColor('white')
+                    bodySetColor('black')
+                    var day_night = document.querySelectorAll('.day_night');
+                    var i = 0
+                    while(i < day_night.length) {
+                        day_night[i].value = 'Night'; 
+                        i = i + 1;
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="topbar">
+            <h1>33강 객체의 활용 </h1>
+        </div>  
+        <div class="box">
+            <h3> 기존 코드 </h3>
+            <input class="day_night" type="button" value="Night" onclick="
+                dayNightHandler(this);
+            ">
+            <div class="example">
+                <xmp>
+function bodySetBackgroundColor(color) {
+    document.querySelector('body').style.backgroundColor = color;
+};
+function bodySetColor(color) {
+    document.querySelector('body').style.color = color;
+};
+if (self.value === 'Night') {
+    bodySetBackgroundColor('rgb(0,0,0,0.85');
+    bodySetColor('white');
+    var day_night = document.querySelectorAll('.day_night');
+    var i = 0
+    while(i < day_night.length) {
+        day_night[i].value = 'Day'; 
+        i = i + 1;
+    }
+} else {
+    bodySetBackgroundColor('white')
+    bodySetColor('black')
+    var day_night = document.querySelectorAll('.day_night');
+    var i = 0
+    while(i < day_night.length) {
+        day_night[i].value = 'Night'; 
+        i = i + 1;
+    }
+}
+                </xmp>
+            </div>
+            <pre>
+함수를 활용해 코드양을 줄였지만, 객체는 사용되지 않았다. 
+- 함수의 이름이 다소 복잡하다. (bodySetBackgroundColor 등등)
+- while문이 반복되어 코드가 불필요하게 길다.
+            </pre>
+        </div>
+        <div class="box">
+            <h3>객체 활용 코드</h3>
+            <input class="day_night" type="button" value="Night" onclick="
+                dayNightHandler(this);
+            ">
+            <div class="example">
+                <xmp>
+var body = {
+    setColor : function(color) {
+        document.querySelector('body').style.color = color;
+    },
+    setBackgroundColor : function(color) {
+        document.querySelector('body').style.backgroundColor = color;
+    },
+}
+var input = {
+    setValue : function(DNChange) {
+        var day_night = document.querySelectorAll('.day_night');
+        var i = 0
+        while(i < day_night.length) {
+            day_night[i].value = DNChange; 
+            i = i + 1;
+        }
+    }
+}
+function dayNightHandler(self) {
+    if (self.value === 'Night') {
+        body.setBackgroundColor('rgb(0,0,0,0.85');
+        body.setColor('white');
+        input.setValue('Day')
+    } else {
+        body.setBackgroundColor('white')
+        body.setColor('black')
+        input.setValue('Night')
+    }
+}
+                </xmp>
+            </div>
+            <pre>
+함수와 객체를 같이 사용했다.
+- 객체가 사용되어 함수(메소드)의 이름이 더 간결해졌다.
+- 반복되는 코드가 줄어들어 불필요한 코드가 사라졌다.
+            </pre>
+        </div>
+        
+        
+    </body>
+</html>

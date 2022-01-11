@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> 31강 객체와 반복문  </title>
+        <style type='text/css'>
+            @import url('../css.css');
+        </style>
+        
+    </head>
+    <body>
+        <div class="topbar">
+            <h1> 객체와 반복문 </h1>
+        </div>  
+        <div class="box">
+            <h3> 반복문을 통해 데이터 가져오기 </h3>
+            <pre>
+배열은 반복문을 통해 데이터를 다 가져옴
+객체도 반복문을 통해 데이터를 다 가져올 수 있음 
+* key 값 : 객체에서 꺼내오는 대상에 붙인 이름표의 값 
+* index 값 : 배열에서 꺼내오는 대상의 순서 값 
+            </pre>
+        </div>
+        <div class="box">
+            <h3> 실습  for문 (var key in object) {}</h3>
+            <script>
+                var naming = {
+                    'designer' : 'wonho',
+                    'publisher' : 'minsu'
+                }
+                naming.planner = 'yuri';
+                naming['team jjang'] = 'daeguen';
+                for(var key in naming) {
+                    document.write(key + ' : ' + naming[key] + '<br>');
+                }
+            </script>
+            <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/for...in"> 객체 반복문 검색 javascript object iterlate</a>
+            <pre>
+for (const property in object) {
+    console.log(`${property}: ${object[property]}`);
+    }
+            </pre>
+            <div class="example">
+                <xmp>
+for(var key in naming) {
+    document.write(key + ' : ' + naming[key] + '<br>');
+}
+                </xmp>
+            </div>
+            <pre>
+for문 안에 ()에 var key in naming 을 적어놓음
+naming 안에 있는 key 값들을 가져오는 for문(반복문)    
+            </pre>
+        </div>
+        
+    </body>
+</html>

@@ -6,9 +6,7 @@
         <style type='text/css'>
             @import url('../css.css');
         </style>
-        <script>
-           
-        </script>
+        <script src="../color.js"> </script>
     </head>
     <body>
         <div class="topbar">
@@ -26,13 +24,37 @@
 .
 .
 
-먼저 파일로 정리정돈을 하게 됨 
+최종적으로 파일로 정리정돈을 하게 됨 
             </pre>
-            
-            
+            <h3> 파일로 정리 정돈 하기 </h3>
+            <pre>
+css 와 js 파일을 만들어서 정리정돈 할 수 있음 
+            </pre>
+            <p>css</p>
+            <div class="example">
+                <xmp>
+<link rel="stylesheet" type="text/css" href="css/style.css">      - 1번째 방법 속도 측면에선 1번이 더 좋음
+
+<style type='text/css'>                                           - 2번째 방법
+    @import url('../css.css');
+</style>
+                </xmp>
+            </div>
+            <p>js</p>
+            <div class="example">
+                <xmp>
+<script src="../color.js"> </script>
+                </xmp>
+            </div>
+            <pre>
+파일로 정리 정돈하면
+- 여러 개 파일을 불러와야 되어서 서버 입장에선 로드를 여러 번 해야됨 : 이건 좋지 못함
+- 하지만 캐시 (cache) 데이터가 압도적으로 줄어듬 : 이건 좋음
+    - 캐시 데이터가 있으면 서버에 한번 다운로드 한 파일을 다음에 들어올 땐 다운로드 할 필요가 없음
+    - 캐시 데이터는 로컬에서 작용하기 떄문 : 로컬 용량을 차지함
+    = 근데 캐시 데이터가 압도적으로 줄어들면 : 여러 파일을 사용해도 용량 자체는 현저하게 줄어들어 오히려 이득! 
+        - 서버 비용 절감 + 네트워크 트래픽 감소 + 속도 향상 
+            </pre>
         </div>
-        
-        
-        
     </body>
 </html>

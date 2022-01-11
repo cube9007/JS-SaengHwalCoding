@@ -6,8 +6,8 @@
         <style type='text/css'>
             @import url('../css.css');
         </style>
-        <script src="../35강 jQuery.js"> </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="../35강 jQuery.js"> </script>
     </head>
     <body>
         <div class="topbar">
@@ -35,14 +35,46 @@
         <div class="box">
             <h3>jQuery 예시</h3>
             <h4>jQuery 연결 방법</h4>
-            <pre>
+            <xmp>
 jQuery 사이트 -> 다운로드
 cdn 검색 (content delivery network) -> 구글 cdn
-
-            </pre>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>        - 복붙
+            </xmp>
             <input class="day_night" type="button" value="Night" onclick="
                 dayNightHandler(this);
             ">
+            <div class="example">
+                <xmp>
+var body = {
+    setColor : function(color) {
+        $('body').css('color', color)
+    },
+    setBackgroundColor : function(color) {
+        $('body').css('backgroundColor', color)
+    },
+}
+var input = {
+    setValue : function(DNChange) {
+        $('.day_night').val(DNChange);
+    }
+}
+function dayNightHandler(self) {
+    if (self.value === 'Night') {
+        body.setBackgroundColor('rgb(0,0,0,0.85');
+        body.setColor('white');
+        input.setValue('Day')
+    } else {
+        body.setBackgroundColor('white')
+        body.setColor('black')
+        input.setValue('Night')
+    }
+}
+                </xmp>
+            </div>
+            <pre>
+jQuery를 이용하면 반복문을 안쓰고도 똑같이 만들 수 있음 
+$('대상').속성1(속성2,파라미터);
+            </pre>
         </div>
     </body>
 </html>

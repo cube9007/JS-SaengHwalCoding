@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title> 29강 객체 예고  </title>
+        <title> 30강 객체 쓰기와 읽기  </title>
         <style>
             a {
                 color: blue;
@@ -80,50 +80,53 @@
     </head>
     <body>
         <div class="topbar">
-            <h1> 객체 예고 object </h1>
+            <h1> 객체 쓰기와 읽기 object </h1>
         </div>  
         <div class="box">
             <h3> 객체란? </h3>
             <pre>
-* 프로그래밍에서 큰 산 2개가 있다면 하나는 함수, 하나는 객체이다
-함수 기반 위에 객체가 존재함 완전 다른 개념은 아님 
-객체 : 정리정돈 수단 중 하나임 
-    함수나 변수가 엄청나게 많아지면, 복잡도의 한계에 이름
-    연관된 함수, 연관된 변수를 같은 이름으로 그룹핑해서 정리정돈하는 도구 = 객체 
+배열은 순서대로 정보를 정리하는 것이라면
+객체는 순서 없이 정보를 정리하는 것 - 그렇다고 무작위로 넣는 것은 아님 (그건 쓰레기통)
+- 쓰레기통 = 꺼낼 필요가 없음
+- 객체 = 꺼낼 필요가 있음 ( 서로 다르다 )
 
+배열은 이름 없이 순서대로 넣지만 - 순서로 꺼냄
+객체는 이름을 같이 적어 순서 없이 넣음 - 이름으로 꺼냄
             </pre>
-            <input class="day_night" type="button" value="Night" onclick="
-                dayNightHandler(this);
-            ">
+        </div>
+        <div class="box">
+            <h3> 읽고 쓰기  </h3>
+            <script>
+                var naming = {
+                    'designer' : 'wonho',
+                    'publisher' : 'minsu'
+                }
+                document.write('designer : ' + naming.designer + '<br>');
+                document.write('publisher : ' + naming.publisher + '<br>');
+                naming.planner = 'yuri';
+                document.write('planner : ' + naming.planner + '<br>');
+            </script>
             <div class="example">
                 <xmp>
 <script>
-    function dayNightHandler(self) {
-        function bodySetBackgroundColor(color) {                                        - 함수
-            document.querySelector('body').style.backgroundColor = color;
-        }
-        function bodySetColor(color) {                                                  - 함수
-            document.querySelector('body').style.color = color;
-        }
-        if (self.value === 'Night') {
-            bodySetBackgroundColor('rgb(0,0,0,0.85')                                    - 함수사용
-            bodySetColor('white')                                                       - 함수사용
-            self.value = 'Day' ;
-        } else {
-            bodySetBackgroundColor('white')                                             - 함수사용
-            bodySetColor('black')                                                       - 함수사용
-            self.value = 'Night';
-        }
+    var naming = {
+        'designer' : 'wonho',
+        'publisher' : 'minsu'
     }
+    document.write('designer : ' + naming.designer + '<br>');
+    document.write('publisher : ' + naming.publisher + '<br>');
+    naming.planner = 'yuri';
+    document.write('planner : ' + naming.planner + '<br>');
 </script>
                 </xmp>
             </div>
             <pre>
-비슷한 함수를 여러 개 써야될 때도 있음 - 그럴 때 쓰는 게 객체
-객체 = 폴더
-만약 폴더가 없다면 이름이 겹치지 않게 하기 위해서 이름을 엄청 길게 쓸 것임
-하지만 폴더가 있으면 그럴 필요가 없음. 정리가 됨 
-*객체에 속해 있는 함수는 메소드라고 부름 
+배열은 [대괄호]를 쓰지만
+객체는 {중괄호}를 씀
+중괄호 안에는 
+    { 객체의 요소 이름 : 객체의 대상, }
+중괄호 밖에서 객체를 추가할 떄는
+    객체이름.객체요소의 이름 = '객체 대상';
             </pre>
         </div>
         
